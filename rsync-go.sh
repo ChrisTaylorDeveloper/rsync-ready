@@ -1,0 +1,49 @@
+#!/bin/bash
+
+rsync \
+\
+`# archive mode` \
+--archive \
+\
+`# compress during transfer` \
+--compress \
+\
+`# output numbers in human readable format` \
+--human-readable \
+\
+`# show progress during transfer` \
+--progress \
+\
+`# no space-splitting; wildcard chars only` \
+--protect-args \
+\
+`# requests simple itemized list of changes` \
+--itemize-changes \
+\
+`# transform symlink into referent file/dir` \
+--copy-links \
+\
+`# some standard files/dirs to exclude` \
+--exclude .idea \
+--exclude .phpdoc/cache \
+--exclude app/tmp \
+--exclude node_modules \
+--exclude symfony/app/var/log \
+--exclude symfony/var/cache \
+--exclude symfony/var/log \
+--exclude tmp/cache \
+--exclude var/cache \
+--exclude vendor \
+--exclude wordpress/wp-includes \
+--exclude wp-content/debug.log \
+\
+`# Exclude any huge file or dir ending in -NOBU` \
+`# e.g. xmas-video.mpeg-NOBU` \
+--exclude '*-NOBU' \
+\
+`# Add custom excludes here` \
+`# --exclude this` \
+`# --exclude that` \
+\
+`# The source and destination args` \
+"$1" "$2"
