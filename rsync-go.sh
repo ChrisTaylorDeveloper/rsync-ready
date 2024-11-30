@@ -37,6 +37,12 @@ rsync \
 --exclude wordpress/wp-includes \
 --exclude wp-content/debug.log \
 \
+`# delete extraneous files from dest dirs` \
+--delete \
+\
+`# also delete excluded files from dest dirs` \
+--delete-excluded \
+\
 `# Exclude any huge file or dir ending in -NOBU` \
 `# e.g. xmas-video.mpeg-NOBU` \
 --exclude '*-NOBU' \
