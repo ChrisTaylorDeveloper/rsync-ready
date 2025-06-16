@@ -14,7 +14,7 @@ rsync \
 `# show progress during transfer` \
 --progress \
 \
-`# no space-splitting; wildcard chars only` \
+`# no space-splitting, wildcard chars only` \
 --protect-args \
 \
 `# requests simple itemized list of changes` \
