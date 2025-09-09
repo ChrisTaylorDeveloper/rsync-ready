@@ -41,6 +41,8 @@ rsync \
 --exclude wp-content/themes/twentytwentyfour \
 \
 `# delete extraneous files from dest dirs` \
+`# Backup size can increase, but gives you the` \
+`# opportunity to recover locally deleted files.` \
 --delete \
 \
 `# also delete excluded files from dest dirs` \
