@@ -46,7 +46,7 @@ rsync \
 `# also delete excluded files from dest dirs` \
 --delete-excluded \
 \
-`# Exclude any huge file or dir ending in -NOBU` \
+`# Exclude huge file/dir ending -NOBU (no backup)` \
 `# e.g. xmas-video.mpeg-NOBU` \
 --exclude '*-NOBU' \
 \
